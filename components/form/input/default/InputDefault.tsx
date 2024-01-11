@@ -1,5 +1,6 @@
 import { InputHTMLAttributes } from 'react'
 import styles from "../styles.module.css"
+import { Error } from '@/components'
 
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
@@ -18,7 +19,7 @@ export const InputDefault = ({ label, type, format, validate, setValue, error, .
     <div>
        <label htmlFor={label}>{ label }</label>
        <input  type={ type } id= { label } className={styles['input-' + format]} {...rest}/>
-       <p className={ styles.error }>{error}</p>
+       <Error error={error}/>
     </div>
   )
 }

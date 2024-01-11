@@ -1,0 +1,15 @@
+.text-area-default{
+  border-radius: 7px;
+  border: 1px solid var(--primary-color);
+  color: #000000;
+  width: 100%;
+  padding: 0.3rem;
+  background-color: #fafafa;
+  min-height: 150px;
+  transition: 0.7s;
+}
+
+.text-area-default:focus{
+  outline: none;
+  border-color: var(--second-color);
+}

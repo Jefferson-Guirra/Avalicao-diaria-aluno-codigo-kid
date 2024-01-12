@@ -2,6 +2,17 @@
   display: block;
 }
 
+.select{
+  transition: all 0.7;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.select:focus{
+  outline: none;
+  border: 1px solid var(--second-color);
+}
+
 .label {
   display: inline-block;
   margin-right: 15px;

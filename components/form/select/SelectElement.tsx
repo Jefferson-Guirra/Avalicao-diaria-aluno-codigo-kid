@@ -26,6 +26,7 @@ export const SelectElement = ({ label, options, disabledOption, value, validate,
   <div className={ styles['select-container']}>
     <label className={ styles.label} htmlFor={ label }> { label }</label>
     <select 
+      className={ styles.select}
       name={ label } 
       id={ label } 
       {...rest}

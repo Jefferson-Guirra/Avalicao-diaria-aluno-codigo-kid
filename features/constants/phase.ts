@@ -1,19 +1,19 @@
 import { SelectOptions } from '@/components/form/select/SelectElement'
 
 export interface  Phases{
-  robotica: Array<SelectOptions>,
-  analista_de_tecnologia: Array<SelectOptions>
+  Robótica: Array<SelectOptions>,
+  'Analista de tecnologia': Array<SelectOptions>
 }
 
 export const phases: Phases ={
-  robotica: [
+  ['Robótica']: [
   { name: 'Escolha a fase', value: 'Escolha a fase'},
   { name: 'fase 01', value: 'fase 01'},
   { name: 'fase 02', value:'fase 02' },
   { name: 'fase 03', value:'fase 03' },
   { name: 'fase 04', value:'fase 04' }
 ],
-  analista_de_tecnologia: [
+  ['Analista de tecnologia']: [
   { name: 'Escolha a fase', value: 'Escolha a fase'},
   { name: 'introdução a informática', value: 'introducao a informatica'},
   { name: 'windos 11 essencial', value: 'windows 11 essencial'},

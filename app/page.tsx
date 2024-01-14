@@ -1,10 +1,11 @@
-import Image from 'next/image'
 import styles from './page.module.css'
+import * as React from "react";
+
+import { HomeContainer } from '@/features/home/containers/HomeContainer';
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <h1>testando</h1>
-    </main>
-  )
+  return(
+  <main className="main">
+    <HomeContainer />
+  </main>);
 }

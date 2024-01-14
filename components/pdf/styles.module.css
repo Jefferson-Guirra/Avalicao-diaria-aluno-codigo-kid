@@ -1,0 +1,23 @@
+.button-container button{
+  display: block;
+  margin: 0 auto;
+}
+
+.btn {
+  font-family: 'Electrolize', sans-serif;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #000000;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.7s;
+  padding: 12px;
+  width: fit-content;
+}
+
+.btn:hover{
+  outline: none;
+  background-color: var(--second-color);
+  border-color: #eee;
+  color: #eeee;
+}

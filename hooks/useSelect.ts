@@ -6,7 +6,6 @@ export const useSelect = () => {
 
   const validateValue = (value: string): boolean => {
     const validation = value.length >=1
-
     if(!validation){
       setError('Campo obrigatório')
     } 

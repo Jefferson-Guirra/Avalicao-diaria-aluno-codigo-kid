@@ -44,7 +44,7 @@ export const useForm = (type: Props) => {
 
     return validation
   } 
-  const onChange = ({target}: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = ({target}: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setValue(target.value)
     if(error.length) validateValue(value)
   }

@@ -5,6 +5,7 @@ import { FieldPdf } from '../pdf-field/FieldPdf'
 import { Student } from '../../@types/student'
 import GeneratePdf from '@/components/pdf/generatePdf'
 import React from 'react'
+import { contentPhases } from '@/features/constants/content'
 
 interface Props extends Student {
   images: string[]
@@ -12,6 +13,7 @@ interface Props extends Student {
 
 export const PdfModel = ({username, classRoom, comments, course, comportment, images, phase, behavior}: Props) => {
   const ref =React.useRef<HTMLDivElement>(null)
+  const content: any = contentPhases
 
   return (
     <>
@@ -40,6 +42,7 @@ export const PdfModel = ({username, classRoom, comments, course, comportment, im
         <FieldPdf field='Aula' value={ classRoom } />
       </div>
       <div className={ styles.box }>
+        <FieldPdf field=' Conteúdo' value={ content[course][phase][classRoom] }/>
         <FieldPdf field='Comportamento' value={ behavior }/>
         {comportment && <FieldPdf field='justificação do comportamento' value={ comportment } /> }
         <FieldPdf field='Observações' value={ comments }/>

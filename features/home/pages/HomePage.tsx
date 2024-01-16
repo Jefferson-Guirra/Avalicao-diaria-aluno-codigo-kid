@@ -1,6 +1,6 @@
 "use client"
 import styles from './styles.module.css'
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { 
   dataCoursers,
   Form, 
@@ -71,7 +71,7 @@ export const HomePage = () => {
             {...phasesOptions} 
             label='Fase' 
             options={dataPhases[selectOptions.value] } 
-            defaultValue='Escolha  a fase' 
+            defaultValue='Escolha a fase' 
             disabledOption='Escolha a fase' />
           }
           <Form.SelectElement defaultValue={ 'Escolha a aula' } disabledOption='Escolha a aula' {...classroom} label='Aula:' options={classRoom}/>

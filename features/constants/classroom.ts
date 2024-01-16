@@ -6,7 +6,7 @@ export const createClassRoomArray = () => {
   classRoomArray.push({name: 'Escolha a aula', value: 'Escolha a aula'})
   for(let count = 1; count < 31; count++) {
     if(count < 10){
-      classRoomArray.push( { name: classRoom.name + '0' + count, value: classRoom.value + count})
+      classRoomArray.push( { name: classRoom.name + '0' + count, value: classRoom.value + '0' + count})
     } else{
       classRoomArray.push( { name: classRoom.name + count, value: classRoom.value + count})
 

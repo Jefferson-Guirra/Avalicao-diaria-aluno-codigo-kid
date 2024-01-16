@@ -4,6 +4,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  transform: translate3d(-2rem,0,0);
   flex-direction: column;
 }
 

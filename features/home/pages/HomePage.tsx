@@ -7,11 +7,13 @@ import {
   useForm, 
   phases, 
   behavior, 
-  createClassRoomArray,  
+  createOptionsClass,
+  createOptionsEvaluations,  
   PdfModel} from './protocols'
 import { Student } from '../@types/student'
 
-const classRoom = createClassRoomArray()
+const classRoom = createOptionsClass()
+const evaluations = createOptionsEvaluations()
 
 export const HomePage = () => {
   const [studentData, setStudentData] = useState<Student>({} as Student)
@@ -21,6 +23,7 @@ export const HomePage = () => {
   const selectOptions = useForm('default')
   const phasesOptions = useForm('default')
   const behaviorOptions = useForm('default')
+  const evaluationsState = useForm('default')
   const comportment = useForm('default')
   const comments = useForm('default')
   const [urls, setUrls] = useState<string[]>([])
@@ -75,6 +78,7 @@ export const HomePage = () => {
             disabledOption='Escolha a fase' />
           }
           <Form.SelectElement defaultValue={ 'Escolha a aula' } disabledOption='Escolha a aula' {...classroom} label='Aula:' options={classRoom}/>
+          <Form.SelectElement  defaultValue={ 'Escolha a nota' } disabledOption='Escolha a nota' {...evaluationsState} label='Nota:' options={evaluations}/>
           <Form.SelectElement 
             {...behaviorOptions}
             label='Comportamento:'
@@ -82,7 +86,6 @@ export const HomePage = () => {
             defaultValue={ 'Escolha o comportamento'}
             disabledOption='Escolha o comportamento'
           />
-          {behaviorOptions.value === 'ruim' || behaviorOptions.value === 'intermediário'  && <Form.TextArea {...comportment} label='Justifique comportamento:' format='default' />}
           <Form.TextArea {...comments} label='Observações:' format='default'/>
           <input type="file" multiple  onChange={handleOnchange}/>
           <Form.Button text='criar documento' format='default'/>

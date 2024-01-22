@@ -1,6 +1,6 @@
 import { SelectOptions } from '@/components/form/select/SelectElement'
 
-export const createClassRoomArray = () => {
+export const createOptionsClass = () => {
   const classRoom: SelectOptions = { value: 'Aula ', name: 'Aula '}
   const classRoomArray: Array<SelectOptions> = []
   classRoomArray.push({name: 'Escolha a aula', value: 'Escolha a aula'})
@@ -14,4 +14,14 @@ export const createClassRoomArray = () => {
 
   }
   return classRoomArray
+}
+
+
+export const createOptionsEvaluations = (): SelectOptions[] => {
+  const evaluations: SelectOptions[] = [{value: 'Escolha a nota', name: 'Escolha a nota'}]
+
+  for(let count = 0 ; count <= 10; count++) {
+    evaluations.push({ name: count * 10 +  '%', value: count * 10 +  '%'})
+  }
+  return evaluations
 }

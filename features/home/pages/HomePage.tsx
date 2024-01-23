@@ -11,6 +11,7 @@ import {
   createOptionsEvaluations,  
   PdfModel} from './protocols'
 import { Student } from '../@types/student'
+import { CardImg } from '@/components/html-canvas/HtmlCanvas'
 
 const classRoom = createOptionsClass()
 const evaluations = createOptionsEvaluations()
@@ -24,7 +25,6 @@ export const HomePage = () => {
   const phasesOptions = useForm('default')
   const behaviorOptions = useForm('default')
   const evaluationsState = useForm('default')
-  const comportment = useForm('default')
   const comments = useForm('default')
   const [urls, setUrls] = useState<string[]>([])
 
@@ -45,7 +45,6 @@ export const HomePage = () => {
     }
   }
   
-  
   const handleSubmit = (e: React.FormEvent <HTMLFormElement>) => {
     e.preventDefault()
     const validate = username.validate() && selectOptions.validate() && classroom.validate() && selectOptions.validate() && phasesOptions.validate()
@@ -59,7 +58,7 @@ export const HomePage = () => {
         behavior: behaviorOptions.value,
         classRoom: classroom.value,
         comments: comments.value,
-        comportment: comportment.value
+        evaluations: evaluationsState.value
       })
     }
   }
@@ -91,6 +90,7 @@ export const HomePage = () => {
           <Form.Button text='criar documento' format='default'/>
         </Form.Root>
         {Object.keys(studentData).length > 0 && <PdfModel images={urls} {...studentData}/>}
+        <CardImg />
       </section>
   )
 }

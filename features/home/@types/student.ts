@@ -5,5 +5,5 @@ export interface Student {
   classRoom: string
   behavior: string
   comments: string
-  comportment?: string
+  evaluations: string
 }

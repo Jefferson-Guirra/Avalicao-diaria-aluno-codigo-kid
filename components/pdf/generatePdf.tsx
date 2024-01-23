@@ -12,17 +12,21 @@ interface  Props {
   html: React.MutableRefObject<HTMLDivElement>;
 
 };
-
 const GeneratePdf = ({ html, username, classRoom, course, phase,  }: Props) => {
 
 
   const generateImage=async ()=>{
-    const fileName = username + '-' + course + '-' + phase + '-' + classRoom
-    const image = await toPng(html.current,{quality:1, cacheBust: true})
-    const doc = new jsPDF();
+    
+    try{
+      const fileName = username + '-' + course + '-' + phase + '-' + classRoom
+      const image = await toPng(html.current,{quality:1, cacheBust: true})
+      const doc = new jsPDF();
+        doc.addImage(image,'JPEG',5,22,200,160);
+        doc.save(fileName);
 
-      doc.addImage(image,'JPEG',5,22,200,160);
-      doc.save(fileName);
+    } catch(err) {
+      console.log(err)
+    }
 
 
   }

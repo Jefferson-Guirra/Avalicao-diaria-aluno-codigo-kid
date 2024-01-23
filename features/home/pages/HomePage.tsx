@@ -90,7 +90,6 @@ export const HomePage = () => {
           <Form.Button text='criar documento' format='default'/>
         </Form.Root>
         {Object.keys(studentData).length > 0 && <PdfModel images={urls} {...studentData}/>}
-        <CardImg />
       </section>
   )
 }

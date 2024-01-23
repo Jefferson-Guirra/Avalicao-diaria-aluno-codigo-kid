@@ -7,7 +7,7 @@ export const FieldPdf = ({ field, value }: Field) => {
   return (
     <div className={ styles.container}>
       <p className={ styles.title }>{ field }</p>
-      <p>{ value }</p>
+      <p className={ styles.content }>{ value }</p>
     </div>
   )
 }

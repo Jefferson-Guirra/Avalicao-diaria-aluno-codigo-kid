@@ -43,7 +43,7 @@ export const contentPhases: Content = {
     ["Fase 02"]:{
       ['Aula 01']: 'O estudante aprendeu sobre o conceito e uso da energia solar. No decorrer da aula o estudante criou o projeto carro solar, capaz de se movimentar apenas quahndo há luminosidade.',
       ['Aula 02']: 'O estudante aprendeu sobre o conceito e uso da pneumática, ciência que estuda o uso do gás ou ar pressurizado.No deccorrer da aula o estudante criou o projeto empilhadeira que utiliza o ar comprimido de seringas para emilhar objetos.',
-      ['Aula 03']: 'O estudante aprendeu sobre o conceito de força, entendo afundo as características de uma grandeza vetorial (módulo, direção e sentido. Ao decorrer da aula o estudante criou o projeto da garra robô, que utiliza o conceito de força para movimentação.',
+      ['Aula 03']: 'O estudante aprendeu sobre o conceito de força, entendo afundo as características de uma grandeza vetorial (módulo, direção e sentido). Ao decorrer da aula o estudante criou o projeto da garra robô, que utiliza o conceito de força para movimentação.',
       ['Aula 04']: 'O estudante aprendeu o conceito e uso dos diferentes tipos de sistema de seguranças (mecânicos e eletrônicos). No decorrer da aula o aluno dessenvolveu o projeto cofre, que só aberto apertando a sequêcia correta de botões.',
       ['Aula 05']: 'O estudante aprendeu sobre o conceito e aplicação do movimento retilíneo uniforme. No decorrer da aula o aluno produzio o projeto radar de velocidade, o qual emite um sinal vermelho e alarme para objetos acima da velocidade permitida.',
       ['Aula 06']: 'O estudante aprendeu sobre o conceito e aplição da aceleração. No decorrer da aula o estudante desenvolveu o projeto carro dragster que entra no estado de aceleração ao apertar no botão.',

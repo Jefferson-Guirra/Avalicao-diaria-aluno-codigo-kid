@@ -52,7 +52,7 @@ export const PdfModel = ({username, classRoom, comments, course, evaluations, im
           <h1>Ficha Diária</h1>
         </div>
         <div className={ styles.box}>
-          <FieldPdf field='Instituição' value='Codígo kid'/>
+          <FieldPdf field='Instituição' value='Código kid'/>
           <FieldPdf field='UF' value='Bahia' />
           <FieldPdf field='Unidade' value='Campo Formoso' />
           <FieldPdf field='Telefone' value='(74)8129-7562' />

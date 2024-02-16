@@ -10,7 +10,7 @@ interface Props extends Student {
   images: string[]
 }
 
-export const PdfModel = ({username, classRoom, comments, course, evaluations, images, phase, behavior}: Props) => {
+export const PdfModel = ({username, classRoom, comments, course, evaluations, images, phase, behavior, unity}: Props) => {
   const content: any = contentPhases
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -54,7 +54,7 @@ export const PdfModel = ({username, classRoom, comments, course, evaluations, im
         <div className={ styles.box}>
           <FieldPdf field='Instituição' value='Código kid'/>
           <FieldPdf field='UF' value='Bahia' />
-          <FieldPdf field='Unidade' value='Campo Formoso' />
+          <FieldPdf field='Unidade' value= {unity} />
           <FieldPdf field='Telefone' value='(74)8129-7562' />
         </div>
         <div className={ styles.box }>

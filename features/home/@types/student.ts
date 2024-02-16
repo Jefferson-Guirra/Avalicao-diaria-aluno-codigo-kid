@@ -6,4 +6,5 @@ export interface Student {
   behavior: string
   comments: string
   evaluations: string
+  unity: string
 }

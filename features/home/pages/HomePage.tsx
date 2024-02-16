@@ -9,15 +9,17 @@ import {
   behavior, 
   createOptionsClass,
   createOptionsEvaluations,  
-  PdfModel} from './protocols'
+  PdfModel, 
+  unityData
+} from './protocols'
 import { Student } from '../@types/student'
-import { CardImg } from '@/components/html-canvas/HtmlCanvas'
 
 const classRoom = createOptionsClass()
 const evaluations = createOptionsEvaluations()
 
 export const HomePage = () => {
   const [studentData, setStudentData] = useState<Student>({} as Student)
+  const unity = useForm('default')
   const username = useForm('default')
   const classroom = useForm('text')
   const dataPhases: any = phases
@@ -58,7 +60,8 @@ export const HomePage = () => {
         behavior: behaviorOptions.value,
         classRoom: classroom.value,
         comments: comments.value,
-        evaluations: evaluationsState.value
+        evaluations: evaluationsState.value,
+        unity: unity.value
       })
     }
   }
@@ -77,6 +80,7 @@ export const HomePage = () => {
             disabledOption='Escolha a fase' />
           }
           <Form.SelectElement defaultValue={ 'Escolha a aula' } disabledOption='Escolha a aula' {...classroom} label='Aula:' options={classRoom}/>
+          <Form.SelectElement defaultValue={ 'Escolha a unidade'} disabledOption='Escolha a unidade' {...unity} label='Unidade:' options={unityData}/>
           <Form.SelectElement  defaultValue={ 'Escolha a nota' } disabledOption='Escolha a nota' {...evaluationsState} label='Nota:' options={evaluations}/>
           <Form.SelectElement 
             {...behaviorOptions}

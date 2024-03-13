@@ -19,7 +19,7 @@ export const DefaultTextArea = ({error, setValue, label, format, validate, ...re
   return (
     <div className={styles.container}>
     <label htmlFor={ label }>{label}</label>
-    <textarea className={styles['text-area-' + format]} id={ label } {...rest}/>
+    <textarea spellCheck="true" className={styles['text-area-' + format]} id={ label } {...rest}/>
     <Error error={ error }/>   
     </div>
   )
